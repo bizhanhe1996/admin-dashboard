@@ -3,183 +3,40 @@
   <head lang="en-US" dir="ltr">
     <title>My Dashboard</title>
     <meta charset="UTF-8" />
-    <style>
-      #grid-box {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 1rem;
-        row-gap: 1rem;
-        div.item {
-          height: 200px;
-          border-radius: 4px;
-          box-shadow: 0 0 8px rgb(160, 160, 160);
-          overflow: hidden;
-          position: relative;
-          img {
-            margin: auto;
-            width: 100%;
-            object-position: center center;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            &:hover {
-              transform: scale(1.2);
-            }
-            z-index: 1;
-          }
-          div {
-            z-index: 2;
-            position: absolute;
-            width: 100%;
-            backdrop-filter: blur(44px);
-            border-radius: 0.5rem 0 0 0.5rem;
-            padding: 1rem;
-            bottom: 10%;
-            left: 10%;
-            h2 {
-              margin: 0;
-              margin-bottom: 0.5rem;
-              color: rgb(63, 63, 63);
-            }
-            p {
-              margin: 0;
-              color: rgb(127, 127, 127);
-            }
-          }
-        }
-        @media screen and (max-width: 601px) {
-          grid-template-columns: 1fr 1fr;
-        }
-        @media screen and (min-width: 601px) and (max-width: 900px) {
-          grid-template-columns: 1fr 1fr 1fr;
-        }
-      }
-      * {
-        box-sizing: border-box;
-        font-family: Ubuntu, Arial;
-        user-select: none;
-      }
-      body {
-        margin: 0;
-      }
-      p {
-        text-align: justify;
-        margin: 0;
-        color: rgb(90, 90, 90);
-        line-height: 1.5rem;
-      }
-      main {
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 128px 1fr;
-      }
-      aside {
-        box-shadow: 2px 0px 8px #888888;
-        z-index: 2;
-        background: linear-gradient(
-          135deg,
-          rgb(18, 168, 168),
-          rgb(210, 218, 255) 80%,
-          rgb(116, 255, 116) 100%
-        );
-        color: whitesmoke;
-        nav {
-          ul {
-            list-style-type: none;
-            list-style-position: unset;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            li {
-              padding: 1rem;
-              padding-bottom: 0;
-              cursor: pointer;
-              user-select: none;
-              font-weight: 700;
-            }
-          }
-        }
-      }
-      section {
-        display: grid;
-        grid-template-rows: 40px 1fr 20px;
-        max-height: 100vh;
-        background-color: lightgray;
-        /* background-image: url(bkg.png);
-        background-repeat: no-repeat;
-        background-position-x: right;
-        background-position-y: 200%; */
-      }
-      header {
-        box-shadow: 0 2px 8px rgb(128, 128, 128);
-        background-color: rgb(179, 179, 179);
-        display: relative;
-        height: 40px;
-        display: flex;
-        color: white;
-        align-items: center;
-        padding: 1rem;
-      }
-      article {
-        padding: 1rem;
-        overflow-y: auto;
-      }
-      article::-webkit-scrollbar {
-        width: 8px;
-      }
-      article::-webkit-scrollbar-track {
-        background: lightgray;
-      }
-      article::-webkit-scrollbar-thumb {
-        background: gray;
-      }
-      article::-webkit-scrollbar-thumb:hover {
-        background: teal;
-      }
-      footer {
-        background: linear-gradient(to right, transparent, gray);
-        text-align: end;
-        color: lightgray;
-        padding-right: 0.5rem;
-      }
-      #aside-collapse {
-        z-index: 3;
-        font-weight: bold;
-        background: rgb(0, 140, 255);
-        display: inline-flex;
-        height: 24px;
-        width: 24px;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        user-select: none;
-        position: absolute;
-        left: 116px;
-        border-radius: 50%;
-      }
-    </style>
+    <meta name="viewport" content="screen-width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
   </head>
   <body>
     <main>
-      <aside>
+      <aside id="layout-aside">
         <nav>
           <ul>
-            <li>Dashboard</li>
-            <li>Posts</li>
-            <li>Gallery</li>
-            <li>Theme</li>
-            <li>Settings</li>
+            <li><i class="ph ph-house"></i><span>Dashboard</span></li>
+            <li><i class="ph ph-note-pencil"></i><span>Posts</span></li>
+            <li><i class="ph ph-image-square"></i><span>Gallery</span></li>
+            <li>
+              <i class="ph ph-paint-brush-household"></i><span>Theme</span>
+            </li>
+            <li><i class="ph ph-gear-six"></i><span>Settings</span></li>
           </ul>
         </nav>
       </aside>
       <section>
         <header>
-          <span id="aside-collapse">
-            <i>&lt;</i>
+          <span id="aside-collapse" onclick="toggleAside()">
+            <i class="ph ph-hand"></i>
           </span>
           <b>My Website</b>
+          <i
+            class="ph ph-user-circle"
+            style="margin-left: auto; font-size: 1.2rem"
+          ></i>
         </header>
         <article>
           <div id="grid-box">
@@ -188,117 +45,118 @@
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/256/256" />
+              <img src="images/01.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/257/257" />
+              <img src="images/02.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/258/258" />
+              <img src="images/03.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/259/259" />
+              <img src="images/04.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/260/260" />
+              <img src="images/05.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/261/261" />
+              <img src="images/06.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/262/260" />
+              <img src="images/07.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/263/260" />
+              <img src="images/08.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/264/260" />
+              <img src="images/09.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/265/260" />
+              <img src="images/10.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/266/260" />
+              <img src="images/11.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/267/260" />
+              <img src="images/12.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/268/260" />
+              <img src="images/13.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/269/260" />
+              <img src="images/14.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/270/270" />
+              <img src="images/15.jpg" draggable="false" />
             </div>
             <div class="item">
               <div>
                 <h2>Title</h2>
                 <p>description goes here</p>
               </div>
-              <img src="https://picsum.photos/271/272" />
+              <img src="images/16.jpg" draggable="false" />
             </div>
           </div>
         </article>
         <footer><small>2025-05-01 Mon 18:35</small></footer>
       </section>
     </main>
+    <script src="scripts.js"></script>
   </body>
 </html>
