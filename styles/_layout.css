@@ -75,13 +75,8 @@ body {
       }
     }
     display: grid;
-    grid-template-rows: 40px 1fr 20px;
+    grid-template-rows: 40px 1fr;
     max-height: 100vh;
     background-color: lightgray;
-    footer {
-      background: darkgray;
-      text-align: end;
-      padding-right: 0.5rem;
-    }
   }
 }
