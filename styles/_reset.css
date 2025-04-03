@@ -1,0 +1,14 @@
+* {
+  font-family: Ubuntu, Arial;
+  box-sizing: border-box;
+  user-select: none;
+  &:focus {
+    outline: none;
+  }
+}
+body {
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}

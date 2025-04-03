@@ -1,162 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html class="light">
   <head lang="en-US" dir="ltr">
-    <title>My Dashboard</title>
+    <title>HTML CSS Practice</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="screen-width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Phosphor Icons -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
+    <link rel="stylesheet" href="styles/app.css" />
   </head>
   <body>
-    <main>
-      <aside id="layout-aside">
-        <nav>
-          <ul>
-            <li><i class="ph ph-house"></i><span>Dashboard</span></li>
-            <li><i class="ph ph-note-pencil"></i><span>Posts</span></li>
-            <li><i class="ph ph-image-square"></i><span>Gallery</span></li>
-            <li>
-              <i class="ph ph-paint-brush-household"></i><span>Theme</span>
-            </li>
-            <li><i class="ph ph-gear-six"></i><span>Settings</span></li>
-          </ul>
-        </nav>
-      </aside>
-      <section>
-        <header>
-          <span id="aside-collapse" onclick="toggleAside()">
-            <i class="ph ph-hand"></i>
-          </span>
-          <b>My Website</b>
-          <i
-            class="ph ph-user-circle"
-            style="margin-left: auto; font-size: 1.2rem"
-          ></i>
-        </header>
+    <aside id="layout-aside">
+      <nav>
+        <li><i class="ph ph-house"></i><span>Dashboard</span></li>
+        <ul>
+          <li><i class="ph ph-note-pencil"></i><span>Posts</span></li>
+          <li><i class="ph ph-image-square"></i><span>Gallery</span></li>
+          <li><i class="ph ph-paint-brush-household"></i><span>Theme</span></li>
+          <li><i class="ph ph-gear-six"></i><span>Settings</span></li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+      <header>
+        <b>My Website</b>
+        <i id="header-profile" class="ph ph-user-circle"></i>
+      </header>
+      <main>
+        <!-- Typography -->
+
         <article>
-          <div id="grid-box">
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/01.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/02.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/03.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/04.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/05.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/06.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/07.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/08.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/09.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/10.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/11.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/12.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/13.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/14.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/15.jpg" draggable="false" />
-            </div>
-            <div class="item">
-              <div>
-                <h2>Title</h2>
-                <p>description goes here</p>
-              </div>
-              <img src="images/16.jpg" draggable="false" />
-            </div>
-          </div>
+          <h1 class="m-0">Typography</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quos
+            ipsum odio perferendis, reiciendis hic illum ullam, soluta rem
+            dolore, repudiandae error! Reiciendis in repellendus pariatur aut.
+            Magni dolorem dolores aliquam natus suscipit. Optio itaque dolores
+            odit magni dolorem tenetur quo at quos cumque provident dolor totam
+            aut atque facilis nostrum, rem et, aspernatur deserunt quia a,
+            molestias recusandae voluptatem. Eius, cumque tenetur dolor
+            explicabo quia minus iure beatae quis eaque expedita consequuntur
+            molestiae ipsam odio nihil voluptas maiores iste perferendis ut
+            reprehenderit est totam eligendi. Hic laboriosam eos ipsam quae iure
+            atque ut, nisi error! Soluta nostrum nesciunt temporibus ratione.
+            Maxime excepturi voluptate repellendus aperiam labore, aspernatur,
+            et minus illo voluptatem rem rerum animi dolorem odio cupiditate
+            enim facilis placeat ipsum. Quisquam facilis debitis nam dolorem
+            facere incidunt quam maiores cumque hic. Debitis modi laborum aut
+            fuga esse, doloribus nulla odit magni earum voluptatibus sint
+            impedit totam deleniti dicta optio, doloremque non, reiciendis sed.
+            Cum repellat, non blanditiis voluptate ab perferendis iure quia
+            error voluptatibus temporibus minima? Maiores, optio, eum veniam
+            minus suscipit omnis quidem obcaecati dolorum quae facilis molestias
+            ullam consectetur ipsa pariatur velit provident iste voluptatibus,
+            aliquid repellat vel. Magni dolores tempore excepturi optio quidem
+            sunt amet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nihil
+            quia illum, dolor id, repellat, doloribus vel corporis recusandae
+            sint numquam molestias commodi voluptates sed optio! Nulla delectus
+            iste qui, non cum voluptatibus reprehenderit, nesciunt autem minima
+            expedita tempora accusamus, veritatis iusto. Consequuntur velit
+            culpa debitis sit necessitatibus esse laudantium. Accusamus
+            veritatis nam consequuntur soluta similique iste placeat fugiat,
+            porro aliquam voluptatum, quibusdam eligendi quos dolores deserunt
+            sequi dolor magnam beatae nihil! Atque distinctio modi quo doloribus
+            vel fugit soluta officiis nobis ratione saepe beatae, velit eos quia
+            delectus rem a ipsa aliquid aspernatur facilis ipsum magnam neque.
+            Sint numquam laudantium pariatur incidunt necessitatibus similique
+            nobis facere! Laboriosam tempora consequuntur, minus aperiam iusto
+            itaque debitis sapiente magni assumenda iste a nulla, exercitationem
+            officia voluptatibus aliquam ad rerum laborum illo vero quae, fugit
+            maxime? Tempore sunt quae magnam velit inventore explicabo nihil
+            minima, animi mollitia optio nulla eum porro aperiam nam, numquam
+            eius! Sint similique eaque quisquam veniam architecto eligendi at
+            optio nisi doloribus rerum totam ducimus illo, omnis quas porro sed
+            error! Beatae, quae. Aspernatur deleniti quibusdam, mollitia ut
+            sequi nostrum doloremque nisi inventore. Deserunt accusantium omnis
+            ut, maiores eum quisquam perspiciatis amet enim quam aspernatur
+            autem hic delectus incidunt temporibus voluptatibus exercitationem
+            ea facere pariatur facilis at ipsum eaque? Dolorum, sed, iste
+            nostrum eligendi, amet soluta cupiditate mollitia at sapiente alias
+            sunt quasi! Qui deleniti eaque assumenda maiores est, neque
+            voluptate animi, nemo recusandae aliquid provident quia eum vero
+            reiciendis doloremque perspiciatis, iusto necessitatibus
+            consectetur. Porro minus ipsam aspernatur?
+          </p>
         </article>
-        <footer><small>2025-05-01 Mon 18:35</small></footer>
-      </section>
-    </main>
+
+        <!-- Table -->
+        <table class="mb-3">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bizhan</td>
+              <td>Hejazi</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>Behrad</td>
+              <td>Hejazi</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Saeed</td>
+              <td>Elahian</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td>Sepehr</td>
+              <td>Irani</td>
+              <td>20</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Footer</td>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- Form -->
+        <form action="#">
+          <progress style="width: 100%" value="1" max="2"></progress>
+          <fieldset class="mb-2">
+            <legend>Personal Information</legend>
+            <div class="input-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="First name" />
+              <small>error appear here</small>
+            </div>
+            <div class="input-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Last name" />
+              <small>error appear here</small>
+            </div>
+          </fieldset>
+          <div style="display: flex; justify-content: end; gap: 0.25rem">
+            <button type="cancel">Cancel</button>
+            <button type="reset">Reset</button>
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </main>
+      <footer><small>2025-05-01 Mon 18:35</small></footer>
+    </section>
     <script src="scripts.js"></script>
   </body>
 </html>
